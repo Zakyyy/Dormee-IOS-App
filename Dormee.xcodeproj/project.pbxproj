@@ -17,9 +17,14 @@
 		591B1D1E2035EADF006F21E6 /* UIInputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B1D1A2035EADE006F21E6 /* UIInputText.swift */; };
 		591B1D1F2035EADF006F21E6 /* UIDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B1D1B2035EADF006F21E6 /* UIDivider.swift */; };
 		591B1D202035EADF006F21E6 /* UIButtonMid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B1D1C2035EADF006F21E6 /* UIButtonMid.swift */; };
-		591B1D222035EB12006F21E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 591B1D212035EB12006F21E6 /* GoogleService-Info.plist */; };
-		591B1D272035EEA9006F21E6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591B1D252035EEA9006F21E6 /* Profile.storyboard */; };
-		591B1D292035EF26006F21E6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B1D282035EF26006F21E6 /* ProfileViewController.swift */; };
+		591B1D292035EF26006F21E6 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B1D282035EF26006F21E6 /* EditProfileViewController.swift */; };
+		591B1D2B2035F642006F21E6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B1D2A2035F642006F21E6 /* ProfileViewController.swift */; };
+		591B1D2D203AC040006F21E6 /* UICardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B1D2C203AC03F006F21E6 /* UICardTableViewCell.swift */; };
+		591B1D31203AD063006F21E6 /* ApartmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B1D30203AD063006F21E6 /* ApartmentsTableViewController.swift */; };
+		591B1D33203AD167006F21E6 /* Apartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591B1D32203AD167006F21E6 /* Apartment.swift */; };
+		591B1D35203B0CF1006F21E6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591B1D34203B0CF1006F21E6 /* Home.storyboard */; };
+		591B1D37203B10EC006F21E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 591B1D36203B10EC006F21E6 /* GoogleService-Info.plist */; };
+		591B1D3A203B14B5006F21E6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591B1D38203B14B5006F21E6 /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,9 +41,14 @@
 		591B1D1A2035EADE006F21E6 /* UIInputText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInputText.swift; sourceTree = "<group>"; };
 		591B1D1B2035EADF006F21E6 /* UIDivider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDivider.swift; sourceTree = "<group>"; };
 		591B1D1C2035EADF006F21E6 /* UIButtonMid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonMid.swift; sourceTree = "<group>"; };
-		591B1D212035EB12006F21E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		591B1D262035EEA9006F21E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../../Dormee_playground/Dormee_playground/Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
-		591B1D282035EF26006F21E6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		591B1D282035EF26006F21E6 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		591B1D2A2035F642006F21E6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		591B1D2C203AC03F006F21E6 /* UICardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICardTableViewCell.swift; sourceTree = "<group>"; };
+		591B1D30203AD063006F21E6 /* ApartmentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentsTableViewController.swift; sourceTree = "<group>"; };
+		591B1D32203AD167006F21E6 /* Apartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Apartment.swift; path = Dormee/Model/Apartment.swift; sourceTree = SOURCE_ROOT; };
+		591B1D34203B0CF1006F21E6 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		591B1D36203B10EC006F21E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		591B1D39203B14B5006F21E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		699B4A993CC36689964EC3A5 /* Pods_Dormee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dormee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,11 +91,12 @@
 				049F6C42202C1D680058C5AD /* Services */,
 				049F6C2C202C1D3A0058C5AD /* AppDelegate.swift */,
 				049F6C30202C1D3A0058C5AD /* Main.storyboard */,
+				591B1D34203B0CF1006F21E6 /* Home.storyboard */,
+				591B1D38203B14B5006F21E6 /* Profile.storyboard */,
 				049F6C33202C1D3A0058C5AD /* Assets.xcassets */,
 				049F6C35202C1D3A0058C5AD /* LaunchScreen.storyboard */,
 				049F6C38202C1D3A0058C5AD /* Info.plist */,
-				591B1D212035EB12006F21E6 /* GoogleService-Info.plist */,
-				591B1D252035EEA9006F21E6 /* Profile.storyboard */,
+				591B1D36203B10EC006F21E6 /* GoogleService-Info.plist */,
 			);
 			path = Dormee;
 			sourceTree = "<group>";
@@ -93,8 +104,10 @@
 		049F6C3E202C1D460058C5AD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				591B1D282035EF26006F21E6 /* ProfileViewController.swift */,
+				591B1D282035EF26006F21E6 /* EditProfileViewController.swift */,
 				049F6C2E202C1D3A0058C5AD /* ViewController.swift */,
+				591B1D2A2035F642006F21E6 /* ProfileViewController.swift */,
+				591B1D30203AD063006F21E6 /* ApartmentsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,6 +119,7 @@
 				591B1D192035EADE006F21E6 /* UICircularImage.swift */,
 				591B1D1B2035EADF006F21E6 /* UIDivider.swift */,
 				591B1D1A2035EADE006F21E6 /* UIInputText.swift */,
+				591B1D2C203AC03F006F21E6 /* UICardTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,8 +127,9 @@
 		049F6C41202C1D630058C5AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				591B1D32203AD167006F21E6 /* Apartment.swift */,
 			);
-			path = Model;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		049F6C42202C1D680058C5AD /* Services */ = {
@@ -203,11 +218,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				591B1D272035EEA9006F21E6 /* Profile.storyboard in Resources */,
+				591B1D3A203B14B5006F21E6 /* Profile.storyboard in Resources */,
 				049F6C37202C1D3A0058C5AD /* LaunchScreen.storyboard in Resources */,
-				591B1D222035EB12006F21E6 /* GoogleService-Info.plist in Resources */,
+				591B1D35203B0CF1006F21E6 /* Home.storyboard in Resources */,
 				049F6C34202C1D3A0058C5AD /* Assets.xcassets in Resources */,
 				049F6C32202C1D3A0058C5AD /* Main.storyboard in Resources */,
+				591B1D37203B10EC006F21E6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,9 +310,13 @@
 				591B1D1D2035EADF006F21E6 /* UICircularImage.swift in Sources */,
 				591B1D202035EADF006F21E6 /* UIButtonMid.swift in Sources */,
 				049F6C2D202C1D3A0058C5AD /* AppDelegate.swift in Sources */,
+				591B1D31203AD063006F21E6 /* ApartmentsTableViewController.swift in Sources */,
 				591B1D1F2035EADF006F21E6 /* UIDivider.swift in Sources */,
 				591B1D1E2035EADF006F21E6 /* UIInputText.swift in Sources */,
-				591B1D292035EF26006F21E6 /* ProfileViewController.swift in Sources */,
+				591B1D2B2035F642006F21E6 /* ProfileViewController.swift in Sources */,
+				591B1D292035EF26006F21E6 /* EditProfileViewController.swift in Sources */,
+				591B1D33203AD167006F21E6 /* Apartment.swift in Sources */,
+				591B1D2D203AC040006F21E6 /* UICardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,10 +339,10 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		591B1D252035EEA9006F21E6 /* Profile.storyboard */ = {
+		591B1D38203B14B5006F21E6 /* Profile.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				591B1D262035EEA9006F21E6 /* Base */,
+				591B1D39203B14B5006F21E6 /* Base */,
 			);
 			name = Profile.storyboard;
 			sourceTree = "<group>";
@@ -445,7 +465,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Dormee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zaki.Dormee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dormee.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -460,7 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Dormee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zaki.Dormee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dormee.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

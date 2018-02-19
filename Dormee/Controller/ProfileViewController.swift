@@ -1,86 +1,109 @@
 //
-//  File.swift
-//  Dormee_playground
+//  ProfileViewController.swift
+//  Dormee
 //
-//  Created by Mark Ragaee on 2/13/18.
-//  Copyright © 2018 Mark Ragaee. All rights reserved.
+//  Created by Mark Ragaee on 2/15/18.
+//  Copyright © 2018 Zaki. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import Firebase
 
-class ProfileViewController : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
+class ProfileViewController: UIViewController {
     
+    let db = Firestore.firestore()
 
-    @IBOutlet weak var genderTextField: UIInputText!
-    @IBOutlet weak var genderPicker: UIPickerView!
-    @IBOutlet weak var birthdateTextField: UIInputText!
-    var gender = ["", "Male", "Female"]
-    @IBOutlet weak var datePicker: UIDatePicker!
-    // Sets number of columns in picker view
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
+    @IBOutlet weak var profileImage: UICircularImage!
+    @IBOutlet weak var userName: UITextView!
+    @IBOutlet weak var email: UITextView!
+    @IBOutlet weak var gender: UITextView!
+    @IBOutlet weak var birthdate: UITextView!
+    @IBOutlet weak var phone: UITextView!
+    @IBOutlet weak var verified: UITextView!
     
-    // Sets the number of rows in the picker view
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return gender.count
-    }
-    
-    // This function sets the text of the picker view to the content of the "salutations" array
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        self.view.endEditing(true)
-        return gender[row]
-    }
- 
+    var initialDict: Dictionary<String, Any> = [:]
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Do any additional setup after loading the view, typically from a nib.
+
     }
     
-    @IBAction func datePickerChanged(_ sender: Any) {
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateStyle = DateFormatter.Style.medium
-        
-        let strDate = dateFormatter.string(from: datePicker.date)
-        birthdateTextField.text = strDate
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    
-    // When user selects an option, this function will set the text of the text field to reflect
-    // the selected option.
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.genderTextField.text = gender[row]
-        self.genderPicker.isHidden = true
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool{
-        self.view.endEditing(true)
-        self.genderPicker.isHidden = true
-        self.datePicker.isHidden = true
-        if (textField == self.genderTextField) {
-            self.genderPicker.isHidden = false
-            return false
-        }
-        else
-            if (textField == self.birthdateTextField) {
-                print("date: ", birthdateTextField.text)
-                if (self.birthdateTextField.text != "") {
-                    let dateFormater = DateFormatter()
-                    dateFormater.dateStyle = DateFormatter.Style.medium
-                    let date = dateFormater.date(from: self.birthdateTextField.text!)
-                    self.datePicker.setDate( date!, animated: false)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        db.collection("users").document("rqc2kvL5Kbl8qBWfNEbw").getDocument{ (document, error) in
+            if let document = document {
+                print("Document data: \(String(describing: document.data()))")
+                if let first = document["first_name"] as? String, let last = document["last_name"] as? String {
+                    self.userName.text = first + " " + last
+                    self.initialDict["first"] = first
+                    self.initialDict["last"] = last
                 }
-                self.datePicker.isHidden = false;
-                return false
+                if let email = document["email"] as? String {
+                    self.email.text = email
+                    self.initialDict["email"] = email
+                }
+                if let gender = document["gender"] as? String {
+                    if gender.contains("male") {
+                        self.gender.text = "Male"
+                        self.initialDict["gender"] = "Male"
+                    } else {
+                        self.gender.text = "Female"
+                        self.initialDict["gender"] = "Female"
+                    }
+                    
+                }
+                if let phone = document["phone"] as? String {
+                    self.phone.text = phone
+                    self.initialDict["phone"] = phone
+                }
+                if let verified = document["verification_status"] as? String {
+                    self.verified.text = verified
+                    self.initialDict["verified"] = verified
+                }
+                if let birthdate = document["birth_date"] as? Date {
+                    print("birthdate")
+                    let formatter = DateFormatter()
+                    formatter.dateStyle = .medium
+                    self.birthdate.text = formatter.string(from: birthdate as Date)
+                    self.initialDict["birthdate"] = self.birthdate.text
+                }
+                if let image = document["profile_uri"] as? String {
+                    let imageUrl:URL = URL(string: image)!
+                    
+                    // Start background thread so that image loading does not make app unresponsive
+                    DispatchQueue.global(qos: .userInitiated).async {
+                        
+                        let imageData:NSData = NSData(contentsOf: imageUrl)!
+                        
+                        // When from background thread, UI needs to be updated on main_queue
+                        DispatchQueue.main.async {
+                            let image = UIImage(data: imageData as Data)
+                            self.profileImage.image = image
+                            self.initialDict["image"] = image
+                        }
+                    }
+                }
+            
+                
+                
+            } else {
+                print("Document does not exist")
+            }
         }
-        return true
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
+    @IBAction func editProfileOnPress(_ sender: Any) {
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "EditProfileViewController") as! EditProfileViewController
+        myVC.initialDict = self.initialDict
+        navigationController?.pushViewController(myVC, animated: true)
     }
-    
+
+
 }
