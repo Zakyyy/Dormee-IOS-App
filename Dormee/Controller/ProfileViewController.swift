@@ -27,6 +27,9 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(profileImageOnClick(tapGestureRecognizer:)))
+        profileImage.isUserInteractionEnabled = true
+        profileImage.addGestureRecognizer(tapGestureRecognizer)
     }
     
     override func didReceiveMemoryWarning() {
@@ -103,6 +106,13 @@ class ProfileViewController: UIViewController {
         let myVC = storyboard?.instantiateViewController(withIdentifier: "EditProfileViewController") as! EditProfileViewController
         myVC.initialDict = self.initialDict
         navigationController?.pushViewController(myVC, animated: true)
+    }
+    
+    @objc func profileImageOnClick(tapGestureRecognizer: UITapGestureRecognizer) {
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "ProfilePhotoViewController") as! ProfilePhotoViewController
+        myVC.image = self.profileImage.image
+        navigationController?.pushViewController(myVC, animated: true)
+        
     }
 
 
