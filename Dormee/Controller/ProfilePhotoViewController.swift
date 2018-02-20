@@ -45,6 +45,7 @@ class ProfilePhotoViewController: UIViewController {
         alertController.addAction(chooseAction)
         
         self.present(alertController, animated: true, completion: nil)
+        
     }
     /*
     // MARK: - Navigation
