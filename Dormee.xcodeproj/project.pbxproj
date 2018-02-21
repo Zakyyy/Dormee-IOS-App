@@ -12,6 +12,8 @@
 		049F6C32202C1D3A0058C5AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049F6C30202C1D3A0058C5AD /* Main.storyboard */; };
 		049F6C34202C1D3A0058C5AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049F6C33202C1D3A0058C5AD /* Assets.xcassets */; };
 		049F6C37202C1D3A0058C5AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049F6C35202C1D3A0058C5AD /* LaunchScreen.storyboard */; };
+		59FE320A203CDB7A00E36FB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59FE3209203CDB7900E36FB0 /* GoogleService-Info.plist */; };
+		6830208B55A7686BD0045F71 /* Pods_Dormee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F3D3579FC280DC361C3D12 /* Pods_Dormee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		049F6C33202C1D3A0058C5AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		049F6C36202C1D3A0058C5AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		049F6C38202C1D3A0058C5AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59FE3209203CDB7900E36FB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7E9F57DEC2005B7C12773216 /* Pods-Dormee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dormee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dormee/Pods-Dormee.debug.xcconfig"; sourceTree = "<group>"; };
+		B4F3D3579FC280DC361C3D12 /* Pods_Dormee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dormee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69878B9C9936514D486E9F6 /* Pods-Dormee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dormee.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dormee/Pods-Dormee.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6830208B55A7686BD0045F71 /* Pods_Dormee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				049F6C2B202C1D3A0058C5AD /* Dormee */,
 				049F6C2A202C1D3A0058C5AD /* Products */,
+				C025C7155D6A943C808B2793 /* Pods */,
+				7C34D0BFD3CC841DBD58873D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +72,7 @@
 				049F6C33202C1D3A0058C5AD /* Assets.xcassets */,
 				049F6C35202C1D3A0058C5AD /* LaunchScreen.storyboard */,
 				049F6C38202C1D3A0058C5AD /* Info.plist */,
+				59FE3209203CDB7900E36FB0 /* GoogleService-Info.plist */,
 			);
 			path = Dormee;
 			sourceTree = "<group>";
@@ -96,6 +106,23 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		7C34D0BFD3CC841DBD58873D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4F3D3579FC280DC361C3D12 /* Pods_Dormee.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C025C7155D6A943C808B2793 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E9F57DEC2005B7C12773216 /* Pods-Dormee.debug.xcconfig */,
+				D69878B9C9936514D486E9F6 /* Pods-Dormee.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 049F6C3B202C1D3A0058C5AD /* Build configuration list for PBXNativeTarget "Dormee" */;
 			buildPhases = (
+				5B8C8B5DFA8064226B67B9CF /* [CP] Check Pods Manifest.lock */,
 				049F6C25202C1D3A0058C5AD /* Sources */,
 				049F6C26202C1D3A0058C5AD /* Frameworks */,
 				049F6C27202C1D3A0058C5AD /* Resources */,
+				307B642F886A78427A22CAB2 /* [CP] Embed Pods Frameworks */,
+				CB6537DD6A07E74FDD1FF947 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,12 +186,85 @@
 			buildActionMask = 2147483647;
 			files = (
 				049F6C37202C1D3A0058C5AD /* LaunchScreen.storyboard in Resources */,
+				59FE320A203CDB7A00E36FB0 /* GoogleService-Info.plist in Resources */,
 				049F6C34202C1D3A0058C5AD /* Assets.xcassets in Resources */,
 				049F6C32202C1D3A0058C5AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		307B642F886A78427A22CAB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Dormee/Pods-Dormee-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dormee/Pods-Dormee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B8C8B5DFA8064226B67B9CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dormee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB6537DD6A07E74FDD1FF947 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dormee/Pods-Dormee-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		049F6C25202C1D3A0058C5AD /* Sources */ = {
@@ -304,12 +407,13 @@
 		};
 		049F6C3C202C1D3A0058C5AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E9F57DEC2005B7C12773216 /* Pods-Dormee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Dormee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zaki.Dormee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dormee.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -318,12 +422,13 @@
 		};
 		049F6C3D202C1D3A0058C5AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D69878B9C9936514D486E9F6 /* Pods-Dormee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Dormee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zaki.Dormee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dormee.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
