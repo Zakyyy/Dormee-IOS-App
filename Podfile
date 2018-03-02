@@ -11,5 +11,8 @@ target 'Dormee' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'Firebase/Firestore'
+  pod ‘GoogleMaps’
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
 
 end
