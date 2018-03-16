@@ -59,6 +59,7 @@ class AdSpaceTypeViewController: UIViewController {
         let myVC = storyboard?.instantiateViewController(withIdentifier: "AdMainViewController") as! AdMainViewController
 //        myVC.image = self.profileImage.image
         navigationController?.pushViewController(myVC, animated: true)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     func toggleContinueButton() {

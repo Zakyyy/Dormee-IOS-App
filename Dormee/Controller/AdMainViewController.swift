@@ -32,6 +32,7 @@ class AdMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
         
         var contentRect = CGRect.zero
@@ -107,6 +108,7 @@ class AdMainViewController: UIViewController {
     
     
     func openNextDetails() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         if(!completed[0]){
             let myVC = storyboard?.instantiateViewController(withIdentifier: "AdDescribePlaceViewController") as! AdDescribePlaceViewController
             navigationController?.pushViewController(myVC, animated: true)
